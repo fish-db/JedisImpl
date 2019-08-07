@@ -17,7 +17,9 @@ public class CrudTest extends BaseTest {
         String key = "user:0002:name";
         String value = "Jon Snow";
 
+        // 向数据库中插入一个值
         jedis.set(key, value);
+        // 然后获得它的值
         String res = jedis.get(key);
 
         System.out.println(res);
